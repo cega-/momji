@@ -104,20 +104,6 @@ function PillOptionsList({searchPillVal, listPillSelected, updatePillSelected, f
         </ul>
     )
 }
-
-function PillOptionsList({searchPillVal, listPillSelected, updatePillSelected})
-{
-    console.log(searchPillVal)
-    return (
-        <ul>
-            {listOptionPill.map((entry) =>
-            (
-                (entry.toLowerCase().includes(searchPillVal) || searchPillVal.length === 0) && !listPillSelected.some(entryInLIst => entryInLIst === entry) ? <li key={`${entry}`} onClick={(e) => handleClickOnOption(e.target.innerText, listPillSelected, updatePillSelected)}>{entry}</li> : null
-            )
-            )}
-        </ul>
-    )
-}
 */
 
 export default PillOptionsList
